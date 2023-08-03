@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(0.25turn, #084b68, #aaada8);
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 30px;
+}
+/**/
+#tasks-container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* task form */
+
+#tasks-header{
+    margin-top: 40px;
+}
+
+#add-task-form {
+    position: relative;
+}
+
+#add-task-form input{
+    box-sizing: border-box;
+    border: 1px solid #084b68;
+    background-color: #aaada8;
+    color: black;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+}
+
+#add-task-form input:placeholder {
+    color: #084b68;
+}
+/*retirar borda de seleção*/
+#add-task-form input:focus {
+    outline: none;
+}
+
+#add-btn {
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid #084b68;
+    cursor: pointer;
+    transition: .5s;
+    width: 60px;
+    height: 53px;
+    top: 0;
+    right: 0;
+    padding-top: 3px ;
+}
+/*tratando hover do btn*/
+#add-btn:hover {
+    background-color: #084b68;
+    color: #FFFFFF;
+}
+
+ion-icon{
+    font-size: 25px;
+}
+
+/* tasks-list */
+
+#task-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+#task-list li{
+    text-align: left;
+    height: 20px;
+    line-height: 50px;
+    /*posição relativa pois os icones vao ser add na linha com posiçao absoluta*/
+    position: relative;
+    border: 2px solid #084b68;
+    background-color: #aaada8;
+    color: #084b68;
+    margin-bottom: 10px;
+    padding: 15px;
+    transition: .5s;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#task-list li span{
+    font-size: 18px;
+}
+
+/*reposicionar icones*/
+#task-list ion-icon{
+    position: absolute;
+    top: 0;
+    height: 40px;
+    transition: .5s;
+    cursor: pointer;
+    width: 30px;
+    padding: 5px;
+}
+
+.done-btn{
+    right: 40px;
+}
+/*add efeito de hover*/
+.done-btn:hover{
+    background-color: greenyellow;
+    color: #FFFFFF;
+}
+.remove-btn{
+    right: 0;
+}
+/*add efeito de hover*/
+.remove-btn:hover{
+    background-color: red;
+    color: #FFFFFF;
+}
+
+
+/*criar uma classe hiden - para excluir tarefas do projeto*/
+.hide {
+    display: none;
+}
+
+/*para quando o evento de tarefa-competada ocorrer*/
+#task-list li.done{
+    background-color: #084b68;
+    color: #FFFFFF;
+    text-decoration: line-through;
+}
